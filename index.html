@@ -3,28 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lambo Learn</title>
+  <title>Supercar Showcase</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="manifest" href="manifest.json" />
 </head>
 <body>
-  <h1>Lambo Learn</h1>
+  <h1>Super-Zilla</h1>
 
-  <canvas id="lamboCanvas" width="300" height="200"></canvas>
+  <h2>Lamborghini Aventador SVJ Roadster</h2>
+  <canvas id="canvasLambo" width="150" height="150"></canvas>
+  <p>Horsepower: 770 <br>
+    Top Speed: 217 mph <br>
+    Engine: 6.5L V12 <br>
+    Weight: 3,483 lbs <br>
+    Transmission: 7-speed automatic <br>
+    Drivetrain: All-wheel drive <br>
+    Fuel Economy: 9 city / 15 highway mpg <br>
+    Price: $577,000 <br>
+    Performance: 0-100 km/h in 2.8 seconds, quarter-mile in 10.5 seconds <br>
+  </p>
+  <img src="lambo.jpg" alt="Lamborghini Aventador" width="300" />
+  <audio src="lambo.mp3" controls></audio>
 
-  <div id="infoMenu">
-    <h2>Lamborghini Aventador</h2>
-    <p>The Aventador features a V12 engine and iconic scissor doors. It delivers over 700 horsepower.</p>
-    <img src="lambo.jpg" alt="Lamborghini Aventador" width="300" />
-    <audio src="engine.mp3" controls></audio>
-  </div>
+  <hr />
+
+  <h2>Ferrari 812 Superfast</h2>
+  <canvas id="canvasFerrari" width="150" height="150"></canvas>
+  <p>Horsepower: 789 <br>
+    Top Speed: 211 mph <br>
+    Engine: 6.5L V12 <br>
+    Weight: 3,362 lbs <br>
+    Transmission: 7-speed dual-clutch <br>
+    Drivetrain: Rear-wheel drive <br>
+    Fuel Economy: 12 city / 16 highway mpg <br>
+    Price: $335,000 <br>
+    Performance: 0-100 km/h in 2.9 seconds, quarter-mile in 10.5 seconds <br>
+  </p>
+  <img src="ferrari.jpg" alt="Ferrari 488" width="300" />
+  <audio src="ferrari.mp4" controls></audio>
+
+  <hr />
+
+  <h2>Porsche 911 GT3 RS</h2>
+  <canvas id="canvasPorsche" width="150" height="150"></canvas>
+  <p>Horsepower: 518 <br> 
+    Top Speed: 193 mph <br>
+    Engine: 4.0L flat-six <br>
+    Weight: 3,153 lbs <br>
+    Transmission: 7-speed PDK <br>
+    Drivetrain: Rear-wheel drive <br>
+    Fuel Economy: 15 city / 20 highway mpg <br>
+    Price: $188,000 <br>
+    Performance: 0-100 km/h in 3.2 seconds, quarter-mile in 11.5 seconds <br>
+  </p>
+  <img src="porsche.jpg" alt="Porsche 911 GT3" width="300" />
+  <audio src="porsche.mp3" controls></audio>
 
   <script>
-    const canvas = document.getElementById('lamboCanvas');
-    const ctx = canvas.getContext('2d');
-    const img = new Image();
-    img.src = 'lambo.jpg';
-    img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    const draw = (id, src) => {
+      const canvas = document.getElementById(id);
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      img.src = src;
+      img.onload = () => ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+
+    draw('canvasLambo', 'lambo-logo.jpg');
+    draw('canvasFerrari', 'ferrari-logo.png');
+    draw('canvasPorsche', 'Porsche-Logo.png');
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js');
