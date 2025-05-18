@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  color: #fcd307;
+}
+
+canvas {
+  border: 2px solid #fcd307;
+  margin-bottom: 20px;
+  background-color: #222;
+}
+
+#infoMenu img {
+  margin-top: 10px;
+  border: 2px solid #fcd307;
+  border-radius: 8px;
+}
