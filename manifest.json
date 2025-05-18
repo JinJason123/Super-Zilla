@@ -1,7 +1,7 @@
 {
-  "name": "Lambo Learn",
-  "short_name": "Lambo",
-  "start_url": ".",
+  "name": "Super-Zilla",
+  "short_name": "Zilla",
+  "start_url": "/Super-Zilla/",
   "display": "standalone",
   "background_color": "#111111",
   "theme_color": "#fcd307",
